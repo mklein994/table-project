@@ -19,21 +19,18 @@ export class TableComponent implements OnInit {
           sort: 'asc',
           sortOrder: 1,
           columnOrder: 0,
-          searchBox: true,
         },
         {
           objectKey: 'name',
           sort: 'asc',
           sortOrder: 0,
           columnOrder: 1,
-          searchBox: true,
         },
         {
           objectKey: 'lucky_number',
           sort: 'enable',
           columnOrder: 2,
           visible: true,
-          searchBox: true,
         },
       ],
       fields: [
