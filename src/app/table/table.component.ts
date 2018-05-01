@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GenericTableComponent, GtConfig } from '@angular-generic-table/core';
+import { SearchHeaderComponent } from './search-header/search-header.component';
 import { Person, PEOPLE } from '../person';
 
 @Component({
@@ -39,15 +40,24 @@ export class TableComponent implements OnInit {
         {
           name: 'Id',
           objectKey: 'id',
+          header: {
+            type: SearchHeaderComponent,
+          },
         },
         {
           name: 'Name',
           objectKey: 'name',
+          header: {
+            type: SearchHeaderComponent,
+          },
         },
         {
           name: 'Lucky number',
           objectKey: 'lucky_number',
           stackedHeading: 'Custom heading',
+          header: {
+            type: SearchHeaderComponent,
+          },
         },
       ],
       data: PEOPLE,
