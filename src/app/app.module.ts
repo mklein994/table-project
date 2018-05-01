@@ -3,15 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { GenericTableModule } from '@angular-generic-table/core';
+
 import { AppComponent } from './app.component';
+import { TableComponent } from './table/table.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
+    GenericTableModule,
     AppRoutingModule
   ],
   providers: [],
