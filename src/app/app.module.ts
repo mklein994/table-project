@@ -12,14 +12,14 @@ import { TableComponent } from './table/table.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
   ],
   imports: [
     BrowserModule,
     GenericTableModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

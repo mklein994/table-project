@@ -5,7 +5,7 @@ import { Person, PEOPLE } from '../person';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  styleUrls: ['./table.component.css'],
 })
 export class TableComponent implements OnInit {
   config: GtConfig<Person>;
@@ -18,39 +18,39 @@ export class TableComponent implements OnInit {
           sort: 'asc',
           sortOrder: 1,
           columnOrder: 0,
-          searchBox: true
+          searchBox: true,
         },
         {
           objectKey: 'name',
           sort: 'asc',
           sortOrder: 0,
           columnOrder: 1,
-          searchBox: true
+          searchBox: true,
         },
         {
           objectKey: 'lucky_number',
           sort: 'enable',
           columnOrder: 2,
           visible: true,
-          searchBox: true
-        }
+          searchBox: true,
+        },
       ],
       fields: [
         {
           name: 'Id',
-          objectKey: 'id'
+          objectKey: 'id',
         },
         {
           name: 'Name',
-          objectKey: 'name'
+          objectKey: 'name',
         },
         {
           name: 'Lucky number',
           objectKey: 'lucky_number',
-          stackedHeading: 'Custom heading'
-        }
+          stackedHeading: 'Custom heading',
+        },
       ],
-      data: PEOPLE
+      data: PEOPLE,
     };
   }
 
