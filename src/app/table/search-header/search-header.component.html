@@ -1,1 +1,5 @@
-<span>{{column}}</span>
+<label>{{column}}</label>
+<input #columnSearchBox
+  class="form-control"
+  (click)="$event.stopPropagation()"
+  (keyup)="searchByColumn(columnSearchBox.value)" />

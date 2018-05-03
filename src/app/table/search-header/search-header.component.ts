@@ -14,6 +14,13 @@ export class SearchHeaderComponent extends GtCustomComponent<Person> implements 
     super();
   }
 
+  searchByColumn(searchTerm: string): void {
+    this.columnSearch.emit({
+      id: this.columnObjectKey,
+      value: searchTerm,
+    });
+  }
+
   ngOnInit() {
   }
 
