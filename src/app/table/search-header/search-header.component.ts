@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { GtCustomComponent } from '@angular-generic-table/core';
+import { Component, OnInit } from '@angular/core';
+
 import { Person } from '../../person';
 
 @Component({
