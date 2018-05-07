@@ -1,5 +1,13 @@
 <label>{{column}}</label>
-<input #columnSearchBox
-  class="form-control"
-  (click)="$event.stopPropagation()"
-  (keyup)="searchByColumn(columnSearchBox.value)" />
+<div class="input-group input-group-sm mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Null only">
+    </div>
+  </div>
+  <input #columnSearchBox class="form-control"
+    type="text"
+    aria-label="Text input with checkbox"
+    (click)="$event.stopPropagation()"
+    (keyup)="searchByColumn(columnSearchBox.value)" />
+</div>

@@ -16,6 +16,7 @@
       "dom"
     ],
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": true
   }
 }
