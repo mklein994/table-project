@@ -1,6 +1,7 @@
 import { GenericTableComponent, GtConfig } from '@angular-generic-table/core';
 import { Component, OnInit } from '@angular/core';
 
+import { BackendService } from '../backend.service';
 import { Person, PEOPLE } from '../person';
 import { ModuleItem } from '../summer-service-locations';
 
@@ -15,7 +16,7 @@ export class TableComponent implements OnInit {
   config: GtConfig<ModuleItem>;
   data: ModuleItem[];
 
-  constructor() {
+  constructor(private backendService: BackendService) {
     this.config = {
       settings: [
         {
@@ -67,6 +68,14 @@ export class TableComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getData();
+  }
+
+  getData() {
+    this.backendService.getSummerServiceLocations()
+      .subscribe(data => {
+        this.data = data[0].features.items;
+      });
   }
 
 }
