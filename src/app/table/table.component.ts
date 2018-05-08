@@ -2,6 +2,7 @@ import { GenericTableComponent, GtConfig } from '@angular-generic-table/core';
 import { Component, OnInit } from '@angular/core';
 
 import { Person, PEOPLE } from '../person';
+import { ModuleItem } from '../summer-service-locations';
 
 import { SearchHeaderComponent } from './search-header/search-header.component';
 
@@ -11,7 +12,8 @@ import { SearchHeaderComponent } from './search-header/search-header.component';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
-  config: GtConfig<Person>;
+  config: GtConfig<ModuleItem>;
+  data: ModuleItem[];
 
   constructor() {
     this.config = {
@@ -59,8 +61,9 @@ export class TableComponent implements OnInit {
           },
         },
       ],
-      data: PEOPLE,
     };
+
+    this.data = [];
   }
 
   ngOnInit() {
