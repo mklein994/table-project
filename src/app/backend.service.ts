@@ -6,7 +6,7 @@ import { SummerServiceLocations } from './summer-service-locations';
 @Injectable()
 export class BackendService {
 
-  private url: '/assets/summer-service-locations.json';
+  private url = '/assets/summer-service-locations.json';
 
   constructor(private http: HttpClient) { }
 
