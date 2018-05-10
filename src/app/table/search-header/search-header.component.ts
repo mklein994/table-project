@@ -14,10 +14,11 @@ export class SearchHeaderComponent extends GtCustomComponent<Person> implements 
     super();
   }
 
-  searchByColumn(searchTerm: string): void {
+  searchByColumn(searchTerm: string, onlyNull: boolean): void {
     this.columnSearch.emit({
       id: this.columnObjectKey,
       value: searchTerm,
+      onlyNull: onlyNull,
     });
   }
 

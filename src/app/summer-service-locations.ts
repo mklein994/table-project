@@ -2,15 +2,15 @@ import { GtRow } from '@angular-generic-table/core';
 
 export interface ModuleData {
   moduleCode: string;
-  features: { items: ModuleItem[] };
+  features: { items: ModuleItem[] }[];
 }
 
 export interface ModuleItem extends GtRow {
   summerServiceId: number; // 1,
-  installDate: Date; // "2018-02-21T00:00:00",
+  installDate: string; // "2018-02-21T00:00:00",
   installedById: number; // null,
   installedByName: string; // "",
-  removedDate: Date; // null,
+  removedDate: string; // null,
   removedById: number; // null,
   removedByName: string; // "",
   hydrantAssetNumber: string; // "W-HY70025368",
@@ -25,10 +25,10 @@ export interface ModuleItem extends GtRow {
   telephoneNumber: string; // "204-555-1234",
   geography: string; // "yaqoHrm{oQ",
   modifiedBy: string; // null,
-  modifiedDate: Date; // "0001-01-01T00:00:00",
+  modifiedDate: string; // "0001-01-01T00:00:00",
   modifiedGeography: string; // null,
   version: number; // 0,
-  createdDate: Date; // "2018-01-14T00:00:00"
+  createdDate: string; // "2018-01-14T00:00:00"
 }
 
 export interface SummerServiceLocations {
