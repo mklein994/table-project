@@ -9,6 +9,7 @@
     "build:ci": "ng build --prod --progress false",
     "test": "ng test",
     "lint": "ng lint --type-check --format stylish --force",
+    "lint:fix": "ng lint --type-check --format stylish --force --fix",
     "lint:ci": "ng lint --type-check",
     "e2e": "ng e2e"
   },
