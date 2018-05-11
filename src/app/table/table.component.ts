@@ -6,6 +6,8 @@ import { ModuleItem } from '../summer-service-locations';
 
 import { SearchHeaderComponent } from './search-header/search-header.component';
 
+const dateFormat = new Intl.DateTimeFormat(navigator.language);
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -53,8 +55,7 @@ export class TableComponent implements OnInit {
           name: 'Install Date',
           objectKey: 'installDate',
           header: { type: SearchHeaderComponent },
-          render: (row) => new Date(row.installDate)
-            .toLocaleDateString(navigator.language),
+          render: (row) => this.renderDate(row.installDate),
         }, {
           // number (eg. null)
           name: 'Installed By Id',
@@ -70,6 +71,7 @@ export class TableComponent implements OnInit {
           name: 'Removed Date',
           objectKey: 'removedDate',
           header: { type: SearchHeaderComponent },
+          render: (row) => this.renderDate(row.removedDate),
         }, {
           // number (eg. null)
           name: 'Removed By Id',
@@ -151,6 +153,7 @@ export class TableComponent implements OnInit {
           name: 'Modified Date',
           objectKey: 'modifiedDate',
           header: { type: SearchHeaderComponent },
+          render: (row) => this.renderDate(row.modifiedDate),
         }, {
           // string (eg. null)
           name: 'Modified Geography',
@@ -166,11 +169,16 @@ export class TableComponent implements OnInit {
           name: 'Created Date',
           objectKey: 'createdDate',
           header: { type: SearchHeaderComponent },
+          render: (row) => this.renderDate(row.createdDate),
         },
       ],
     };
 
     this.data = [];
+  }
+
+  private renderDate(date: string): string {
+    return dateFormat.format(new Date(date));
   }
 
   ngOnInit() {
