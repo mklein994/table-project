@@ -1,4 +1,3 @@
-// import { GenericTableComponent, GtConfig } from '@angular-generic-table/core';
 import { GtConfig } from '@angular-generic-table/core';
 import { Component, OnInit } from '@angular/core';
 
