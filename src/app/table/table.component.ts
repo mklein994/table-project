@@ -182,14 +182,22 @@ export class TableComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getData();
+    // this.getSummerServiceLocations();
+    this.getMockData();
   }
 
-  getData() {
-    this.backendService.getSummerServiceLocations()
+  getSummerServiceLocations() {
+    this.backendService
+      .getSummerServiceLocations()
       .subscribe(
         data => this.data = data[0].features[0].items,
         error => console.warn(error)
       );
+  }
+
+  getMockData() {
+    this.backendService
+      .getMockData()
+      .subscribe(data => this.data = data, error => console.warn(error));
   }
 }

@@ -17,8 +17,8 @@ export interface ModuleItem extends GtRow {
   meterNumber: string; // "8675309",
   meterSizeCode: string; // "SIZE8",
   meterSizeDescription: string; // null,
-  startMeterReading: string; // "123456.7",
-  endMeterReading: string; // "123456.8",
+  startMeterReading: number; // "123456.7",
+  endMeterReading: number; // "123456.8",
   location: string; // null,
   serviceRequestNumber: string; // "987654321",
   contact: string; // "Joe Smith",
@@ -27,7 +27,7 @@ export interface ModuleItem extends GtRow {
   modifiedBy: string; // null,
   modifiedDate: string; // "0001-01-01T00:00:00",
   modifiedGeography: string; // null,
-  version: number; // 0,
+  version: string; // 0,
   createdDate: string; // "2018-01-14T00:00:00"
 }
 
