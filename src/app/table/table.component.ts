@@ -133,11 +133,9 @@ export class TableComponent implements OnInit {
           name: 'Telephone Number',
           objectKey: 'telephoneNumber',
           header: { type: SearchHeaderComponent },
-          search: function(row) {
-            return row.telephoneNumber === null
-              ? null
-              : row.telephoneNumber.replace(/[-() .+]/g, '');
-          },
+          search: (row) => row.telephoneNumber === null
+            ? null
+            : row.telephoneNumber.replace(/\D/g, ''),
         }, {
           // string (eg. "yaqoHrm{oQ")
           name: 'Geography',
